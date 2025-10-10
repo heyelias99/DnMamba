@@ -55,17 +55,6 @@ class Solver(object):
                    window_size=8, img_range=1.,depths=[6, 6, 6, 6,6,6],
                    embed_dim=32)
         
-
-        #                 layer_scale_conv=None).cuda()
-
-        # f = '/home/tuser-zhang/work/U-Vmamba/save_mamba+calayer2224/REDCNN_187000iter.ckpt'
-        # state_d = OrderedDict()
-        # for k, v in torch.load(f).items():
-        #         n = k[7:]
-        #         state_d[n] = v
- 
-        # self.model.load_state_dict(state_d)
-        
         
         if (self.multi_gpu) and (torch.cuda.device_count() > 1):
             print('Use {} GPUs'.format(torch.cuda.device_count()))
